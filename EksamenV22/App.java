@@ -15,7 +15,7 @@ public class Person() {
     private Integer person_id;
 
     @ManyToOne
-    @JoinColumn(name = "adresse_id")
+    @JoinColumn(name = "adresse_id", referencedColumnName = "adresse_id")
     private Adresse adresse;
 
     @OneToMany(mappedBy = "person_id" fetch = FetchType.EAGER)
